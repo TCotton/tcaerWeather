@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactClass from 'create-react-class';
-import { Link, IndexLink } from 'react-router';
+import { IndexLink } from 'react-router';
 
 const Nav = ReactClass({
 	render: function () {

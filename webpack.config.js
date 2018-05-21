@@ -8,6 +8,8 @@ module.exports = {
 			Main: path.resolve(path.dirname(''), 'app/components/Main.js'),
 			Nav: path.resolve(path.dirname(''), 'app/components/Nav.js'),
 			Weather: path.resolve(path.dirname(''), 'app/components/Weather.js'),
+			WeatherForm: path.resolve(path.dirname(''), 'app/components/WeatherForm.js'),
+			WeatherMessage: path.resolve(path.dirname(''), 'app/components/WeatherMessage.js'),
 			About: path.resolve(path.dirname(''), 'app/components/About.js'),
 			Examples: path.resolve(path.dirname(''), 'app/components/Examples.js'),
 		}
