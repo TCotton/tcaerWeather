@@ -5,6 +5,7 @@
         "chrome": "66"
       }
     }],
+    "env",
     "react",
     "stage-0"
   ]

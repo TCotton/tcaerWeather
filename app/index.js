@@ -1,17 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// import ReactClass from 'create-react-class';
+import { Route, Router, IndexRoute, hashHistory } from 'react-router';
 import './index.css';
+import Main from './components/Main';
 
-const objOne = {
-	name: 'Andrew',
-	location: 'London'
-}
+ReactDOM.render(
+	<Router history={hashHistory}>
+		<Route path="/" component={Main}>
 
-const objTwo = {
-	age: 25,
-	...objOne
-}
-
-console.dir(objTwo);
-
-ReactDOM.render(<h1>Boilerplate app</h1>, document.getElementById('root'));
+		</Route>
+	</Router>,
+	document.getElementById('root'));
