@@ -12,6 +12,7 @@
   "author": "Andy Walpole",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "create-react-class": "15.6.3",
     "express": "4.16.3",
     "react": "16.3.2",

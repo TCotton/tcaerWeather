@@ -3,6 +3,7 @@ import ReactClass from 'create-react-class';
 
 import WeatherForm from './WeatherForm';
 import WeatherMessage from './WeatherMessage';
+import openWeatherMap from '../api/openWeatherMap';
 
 const Weather = ReactClass({
 	getInitialState: function() {
@@ -12,10 +13,18 @@ const Weather = ReactClass({
 		}
 	},
 	handleSearch: function(location) {
-		this.setState({
-			location: location,
-			temp: 23,
+
+		openWeatherMap.getTemp(location).then((temp) => {
+
+			this.setState({
+				location: location,
+				temp: temp,
+			});
+
+		}, (errorMessage) => {
+			alert(errorMessage);
 		});
+
 	},
 	render: function () {
 

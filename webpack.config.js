@@ -12,6 +12,7 @@ module.exports = {
 			WeatherMessage: path.resolve(path.dirname(''), 'app/components/WeatherMessage.js'),
 			About: path.resolve(path.dirname(''), 'app/components/About.js'),
 			Examples: path.resolve(path.dirname(''), 'app/components/Examples.js'),
+			openWeatherMap: path.resolve(path.dirname(''), 'app/api/openWeatherMap.js'),
 		}
 	},
 	module: {
