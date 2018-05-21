@@ -6,6 +6,7 @@ module.exports = {
 	resolve: {
 		alias: {
 			Main: path.resolve(path.dirname(''), 'app/components/Main.js'),
+			Nav: path.resolve(path.dirname(''), 'app/components/Nav.js'),
 		}
 	},
 	module: {
