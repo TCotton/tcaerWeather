@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactClass from 'create-react-class';
-import 
+import { Link } from 'react-router';
 
 const Nav = ReactClass({
 	render: function () {
 		return (
-			<ul>
-				<li>React Weather</li>
-				<li>Get Weather</li>
-				<li>About</li>
-				<li>Examples</li>
-			</ul>
+			<div>
+				<h2>Nav component</h2>
+				<Link to='/'>Get Weather</Link>
+				<Link to='/about'>About</Link>
+				<Link to='/examples'>Examples</Link>
+			</div>
 		);
 	}
 });

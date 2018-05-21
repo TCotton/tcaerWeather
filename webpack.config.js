@@ -9,6 +9,7 @@ module.exports = {
 			Nav: path.resolve(path.dirname(''), 'app/components/Nav.js'),
 			Weather: path.resolve(path.dirname(''), 'app/components/Weather.js'),
 			About: path.resolve(path.dirname(''), 'app/components/About.js'),
+			Examples: path.resolve(path.dirname(''), 'app/components/Examples.js'),
 		}
 	},
 	module: {
