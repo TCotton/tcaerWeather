@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 // import ReactClass from 'create-react-class';
 import { Route, Router, IndexRoute, hashHistory } from 'react-router';
 import './index.css';
+import './styles/app.css';
 import Main from './components/Main';
 import Weather from './components/Weather';
 import About from './components/About';
