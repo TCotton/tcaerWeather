@@ -4,6 +4,7 @@ import ReactClass from 'create-react-class';
 import WeatherForm from './WeatherForm';
 import WeatherMessage from './WeatherMessage';
 import openWeatherMap from '../api/openWeatherMap';
+import ErrorModal from './errorModel';
 
 const Weather = ReactClass({
 	getInitialState: function() {
@@ -52,7 +53,7 @@ const Weather = ReactClass({
 		function renderError () {
 			if (typeof errorMessage === 'string') {
 				return (
-					<ErrorModal/>
+					<ErrorModal message='errorMessage' />
 				)
 			}
 		}
