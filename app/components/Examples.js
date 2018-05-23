@@ -9,6 +9,8 @@ const Examples = () => {
 			<ul>
 				<li>
 					<Link to='/?location=London'>London</Link>
+				</li>
+				<li>
 					<Link to='/?location=Brazil'>Brazil</Link>
 				</li>
 			</ul>
