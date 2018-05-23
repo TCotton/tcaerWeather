@@ -3,16 +3,23 @@ import { IndexLink } from 'react-router';
 import ReactClass from 'create-react-class';
 
 const Nav = ReactClass({
-	onSearch: function(e) {
+	onSearch: function (e) {
 		e.preventDefault();
-		alert('All wired up!');
+
+		const location = this.refs.search.value;
+		const encodeLocation = encodeURIComponent(location);
+
+		if (location.length > 0) {
+			this.refs.search.value = '';
+			window.location.hash = '#/?location=' + encodeLocation;
+		}
+
 	},
 	render: function () {
 		return (
 			<div className='top-bar'>
 				<div className='top-bar-left'>
 					<ul className='menu'>
-						<li></li>
 						<li>
 							<IndexLink to='/' activeClassName='active' activeStyle={{fontWeight: 'bold'}}>Get Weather</IndexLink>
 						</li>
@@ -28,7 +35,7 @@ const Nav = ReactClass({
 					<form onSubmit={this.onSearch}>
 						<ul className='menu'>
 							<li>
-								<input type='search' placeholder='Search weather' />
+								<input type='search' placeholder='Search weather' ref='search' />
 							</li>
 							<li>
 								<input type='submit' className='button' value='Get weather' />
