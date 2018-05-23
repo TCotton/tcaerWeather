@@ -6,7 +6,7 @@ const WeatherMessage = (props) => {
 
 	return (
 		<div>
-			<h3>It not {temp} in {location}</h3>
+			<h3>It {temp} in {location}</h3>
 		</div>
 	);
 };

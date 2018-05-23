@@ -14,6 +14,7 @@ module.exports = {
 			About: path.resolve(path.dirname(''), 'app/components/About.js'),
 			Examples: path.resolve(path.dirname(''), 'app/components/Examples.js'),
 			openWeatherMap: path.resolve(path.dirname(''), 'app/api/openWeatherMap.js'),
+			ErrorModal: path.resolve(path.dirname(''), 'app/components/errorModel.js'),
 		}
 	},
 	module: {

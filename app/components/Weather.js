@@ -14,7 +14,8 @@ const Weather = ReactClass({
 	handleSearch: function(location) {
 
 		this.setState({
-			loading: true
+			loading: true,
+			errorMessage: undefined
 		});
 
 		openWeatherMap.getTemp(location).then((temp) => {
@@ -25,11 +26,11 @@ const Weather = ReactClass({
 				isLoading: false,
 			});
 
-		}, (errorMessage) => {
+		}, (e) => {
 			this.setState({
 				isLoading: false,
+				errorMessage: e.message,
 			});
-			alert(errorMessage);
 		});
 
 	},
@@ -38,6 +39,7 @@ const Weather = ReactClass({
 		const location = this.state.location;
 		const temp = this.state.temp;
 		const isLoading = this.state.isLoading;
+		const errorMessage = this.state.errorMessage;
 
 		function renderMessage () {
 			if (isLoading) {
@@ -47,11 +49,20 @@ const Weather = ReactClass({
 			}
 		}
 
+		function renderError () {
+			if (typeof errorMessage === 'string') {
+				return (
+					<ErrorModal/>
+				)
+			}
+		}
+
 		return (
-			<div className='text-center'>
-				<h3>Weather components</h3>
+			<div className='text-center width-25'>
+				<h1>Get weather</h1>
 				<WeatherForm onSearch={this.handleSearch}/>
 				{renderMessage()}
+				{renderError()}
 			</div>
 		);
 	}
